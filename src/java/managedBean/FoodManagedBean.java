@@ -18,7 +18,7 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean//аннотация
 @RequestScoped//область видимости бина
 public class FoodManagedBean {
-
+//
     /**
      * Creates a new instance of FoodManagedBean
      */
