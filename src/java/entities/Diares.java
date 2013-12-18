@@ -54,6 +54,7 @@ public class Diares implements Serializable {
     private Date time;
     @Column(name = "date")
     //
+    
     @Temporal(TemporalType.DATE)
     private Date date;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
