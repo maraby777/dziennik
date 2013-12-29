@@ -8,8 +8,13 @@
 
 package managedBean;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import entities.Food;
+import javax.annotation.ManagedBean;
+import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
+//import javax.faces.bean.ManagedBean;
+//import javax.faces.bean.RequestScoped;
+import sessionBeans.FoodFacade;
 
 /**
  *
@@ -18,11 +23,16 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean//аннотация
 @RequestScoped//область видимости бина
 public class FoodManagedBean {
-
+    @EJB
+    private FoodFacade foodFacade;
+    private Food food;
+    
     /**
      * Creates a new instance of FoodManagedBean
      */
     public FoodManagedBean() {
+        this.food = new Food();
     }
+    
     
 }
